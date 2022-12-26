@@ -1,0 +1,15 @@
+FizzBuzz:
+Smells: Long Method, comment
+refactored--> 
+    Long Method: decomposed conditionals to interface PatternMatcher, which is implemented by 3 classes each handling one responsibility.
+    Comment: Removed comments as the code was readable.
+
+PlaintextToHTMLConverter:
+Smells: comment, large class, long method, switch, duplicate code, and Hidden Dependencies code smell.
+Refacoted-->    
+    Comment: Removed the comments by modifying the methods. Comments were in line 60-61 and 68-69 and removed them as those methods were readable.
+    Long Method: made methods smaller by using enum and for each loop (i.e. basicHtmlEncode)
+    Switch case: Replaced all switch cases using the enum
+    Hidden Dependencies code smell: I removed global variables as they are undesirable because it directly causes the Hidden Dependencies code smell.
+    Duplicate code: Line 51 was a duplicated code, which I resolved using the for loop.
+    Deleted method ‘pushACharacterToTheOutput’ as that method wasn’t that much necessary.
